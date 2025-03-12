@@ -1,0 +1,12 @@
+header{
+    background-color: var(--bs-primary-color);
+    
+}
+.logo-container{
+    width: 20vw;
+    
+}
+.logo-container img{
+    width: 100%;
+    
+}

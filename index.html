@@ -4,64 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Canvas Quest</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo">
-          <img src="" alt="" />
+        <div class="logo-container">
+          <img src="images/logo.png" alt="logo reads canvas quest with border around words" />
         </div>
         <ul>
           <li>
-            <a href=""></a>
+            <a href="#">Home</a>
           </li>
 
           <li>
-            <a href=""></a>
+
+            <a href="#">Gallery</a>
           </li>
 
-          <li>
-            <a href=""></a>
-          </li>
         </ul>
 
-        <button title="Login">Login</button>
+        <div class="profile-dropdown">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+              Profile
+            </button>
+            <ul class="dropdown-content">
+              <li><a href="#">Favorites</a></li>
+              <li><a href="#">Stats</a></li>
+            </ul>
+        </div>
 
-        <div class="dropdown">
-          <button class="dropbtn">Dropdown</button>
-          <div class="dropdown-content">
-            <a href="#">Option 1</a>
-            <a href="#">Option 2</a>
-            <a href="#">Option 3</a>
-          </div>
+        <button title="Login">Login</button>
         </div>
       </nav>
     </header>
 
     <main>
-      <p class="tagline">Brought to you by Garrett-Savannah Inc.</p>
 
-      <h1>Welcome to Canvas Quest!</h1>
+        <div class="intro-section">
+            <h1>Welcome to Canvas Quest!</h1>
+            <p class="tagline">Brought to you by Garrett-Savannah Inc.</p>
+            <p>
+                Here at the digital museum, You can find the works of many talented
+                artists. With this interactive game, you can test your knowledge on the
+                many pieces within our collection. Click below to start playing!
+            </p>
+        </div>
 
-      <p>
-        Here at the digital museum, You can find the works of many talented
-        artists. With this interactive game, you can test your knowledge on the
-        many pieces within our collection. click below to start playing!
-      </p>
+        <div class="quiz-section">
+            <button title="PLAY NOW">PLAY NOW</button>
 
-      <button title="PLAY NOW">PLAY NOW</button>
+            <div class="quiz-container">
+                <img src="images/img-placeholder.jpg" alt="">
+      
+        </div>
 
-      <div class="quiz-container"></div>
     </main>
 
     <footer>
-      <div class="socials">
-        <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
-      </div>
+        <div class="socials">
+            <ul>
+              <li>
+                <a href="https://facebook.com" rel="facebook" aria-label="Facebook">
+                  <img src="images/facebook-icon.png" alt="facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com" rel="instagram" aria-label="Twitter">
+                  <img src="images/facebook-icon.png" alt="instagram" />
+                </a>
+              </li>
+            </ul>
+          </div>
 
       &copy; 2025 all rights reserved
     </footer>
