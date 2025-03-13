@@ -1,7 +1,7 @@
-footer{
-    background-color: var(--bs-primary-color);
-    
+footer {
+  background-color: var(--bs-primary-color);
+  color: white;
 }
-.socials img{
-    width: 10vw;
+.socials img {
+  width: 10vw;
 }

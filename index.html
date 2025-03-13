@@ -4,69 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Canvas Quest</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo-container">
-          <img src="images/logo.png" alt="logo reads canvas quest with border around words" />
-        </div>
+    <link rel="stylesheet" href="css/styles.css" />
 
-        <div class="menu-dropdown">
-            <button class="menu-btn">
-              Menu
-            </button>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="content">
+      <header>
+        <nav>
+          <div class="logo-container">
+            <img
+              src="images/logo.png"
+              alt="logo reads canvas quest with border around words"
+            />
+          </div>
+
+          <div class="menu-dropdown">
+            <button class="menu-btn">Menu</button>
             <ul class="dropdown-content">
               <li><a href="#">Home</a></li>
               <li><a href="#">Stats</a></li>
             </ul>
-        </div>
+          </div>
 
-        <button class="login-btn" title="Login">Login</button>
+          <button class="login-btn" title="Login">Login</button>
+        </nav>
+      </header>
 
-      </nav>
-    </header>
-
-    <main>
-
+      <main>
         <div class="intro-section">
-            <h1>Welcome to Canvas Quest!</h1>
-            <p class="tagline">Brought to you by Garrett-Savannah Inc.</p>
-            <p>
-                Here at the digital museum, You can find the works of many talented
-                artists. With this interactive game, you can test your knowledge on the
-                many pieces within our collection. Click below to start playing!
-            </p>
+          <h1>Welcome to Canvas Quest!</h1>
+          <p class="tagline">Brought to you by Garrett-Savannah Inc.</p>
+          <p>
+            Here at the digital museum, You can find the works of many talented
+            artists. With this interactive game, you can test your knowledge on
+            the many pieces within our collection. Click below to start playing!
+          </p>
         </div>
 
         <div class="quiz-section">
-            <button title="PLAY NOW">PLAY NOW</button>
-
-            <div class="quiz-container">
-                <img src="images/img-placeholder.jpg" alt="">
-      
-        </div>
-
-    </main>
-
-    <footer>
-        <div class="socials">
-            <ul>
-              <li>
-                <a href="https://facebook.com" rel="facebook" aria-label="Facebook">
-                  <img src="images/facebook-icon.png" alt="facebook" />
-                </a>
-              </li>
-              <li>
-                <a href="https://instagram.com" rel="instagram" aria-label="Twitter">
-                  <img src="images/facebook-icon.png" alt="instagram" />
-                </a>
-              </li>
-            </ul>
+          <div class="play-container">
+            <button title="PLAY NOW" class="play-button">PLAY NOW</button>
           </div>
+          <div class="quiz-container">
+            <img src="images/img-placeholder.jpg" alt="" />
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="socials">
+        <ul>
+          <li>
+            <a href="https://facebook.com" rel="facebook" aria-label="Facebook">
+              <img src="images/facebook-icon.png" alt="facebook" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com"
+              rel="instagram"
+              aria-label="Twitter"
+            >
+              <img src="images/facebook-icon.png" alt="instagram" />
+            </a>
+          </li>
+        </ul>
+      </div>
 
       &copy; 2025 all rights reserved
     </footer>
+
+    <!-- <img
+      src="data:image\/gif;base64,R0lGODlhBAAFAPQAABsaIB8eIx8eJiMhJS0rKy4rKy8tLTEuLzgpKjg1NDAyOkEsJ0QzLkM0LkM3MUo5MEtBOU5DOVJGPUpAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAEAAUAAAUR4CMlxQIRgMMYQ4MIQTQpRwgAOw=="
+      alt=""
+      width="400px"
+    />-->
   </body>
 </html>
