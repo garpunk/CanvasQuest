@@ -28,7 +28,35 @@
             </ul>
           </div>
 
-          <button class="login-btn" title="Login">Login</button>
+          <!-- LOGIN FORM -->
+          <button id="open-modal" aria-haspopup="dialog">Login</button>
+
+          <dialog id="login-modal">
+            <form class="modal-content animate" method="POST" action="/action_page">
+              <button type="button" id="close-modal" class="close" aria-label="Close Modal">&times;</button>
+              
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" id="uname" name="uname" placeholder="Enter Username" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="psw" name="psw" placeholder="Enter Password" required>
+
+                <button type="submit">Login</button>
+                <label>
+                  <input type="checkbox" name="remember" checked> Remember me
+                </label>
+              </div>
+
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" id="cancel-btn" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </dialog>
+
+          <!--end of: LOGIN FORM-->
+
         </nav>
       </header>
 

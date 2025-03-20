@@ -1,0 +1,58 @@
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    animation: animatezoom 0.6s;
+  }
+  
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+  
+  @keyframes animatezoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  .cancelbtn {
+    background-color: #ccc;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cancelbtn:hover {
+    background-color: #bbb;
+  }
+  
+  .psw a {
+    color: #000;
+  }
+  
+  .psw a:hover {
+    text-decoration: underline;
+  }
+  
