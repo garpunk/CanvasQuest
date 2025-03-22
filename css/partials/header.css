@@ -12,19 +12,6 @@ nav {
   margin-left: auto;
 }
 
-.menu-btn {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.menu-btn:hover {
-  background-color: #2980b9;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -79,6 +66,11 @@ nav {
   height: fit-content;
   margin: 15px;
 }
+
+.menu-btn:hover {
+  background-color: #2980b9;
+}
+
 .login-btn {
   display: flex;
   align-items: center;
@@ -92,4 +84,8 @@ nav {
   cursor: pointer;
   height: fit-content;
   margin: 15px;
+}
+
+.login-btn:hover {
+  background-color: #2980b9;
 }

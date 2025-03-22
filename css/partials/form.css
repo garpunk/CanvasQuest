@@ -57,13 +57,16 @@ input {
   margin-top: 15px;
   margin-bottom: 15px;
   border: none;
-  color: white;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: var(--bs-secondary-color);
+  color: var(--bs-primary-color);
   width: 100%;
   font-size: 16px;
 }
 
+.submit-button:hover {
+  background-color: #2980b9;
+}
 .wrap {
   display: flex;
   justify-content: center;
