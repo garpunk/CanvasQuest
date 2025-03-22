@@ -1,3 +1,10 @@
+import { setupLoginModal } from "./modal.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupLoginModal();
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const menuButton = document.querySelector('.menu-btn');
   const dropdown = document.querySelector('.dropdown-content');
@@ -16,3 +23,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+setupLoginModal();
