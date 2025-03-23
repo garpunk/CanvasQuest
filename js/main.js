@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
   const quizContainer = document.querySelector('.quiz-container');
   const playButton = document.querySelector('.play-button');
+=======
+import { setupLoginModal } from "./modal.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupLoginModal();
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuButton = document.querySelector('.menu-btn');
+  const dropdown = document.querySelector('.dropdown-content');
+>>>>>>> 669e30a04460934a6cda0bbaede6f0d3a97627f5
 
   playButton.addEventListener('click', () => {
     fetch('artInfo.json')
@@ -43,3 +56,5 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch((error) => console.error('Error loading JSON:', error));
   });
 });
+
+setupLoginModal();

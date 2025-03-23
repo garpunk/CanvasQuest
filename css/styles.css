@@ -2,6 +2,7 @@
 @import 'partials/main.css';
 @import 'partials/footer.css';
 @import 'partials/variables.css';
+@import 'partials/form.css';
 
 html,
 body {
