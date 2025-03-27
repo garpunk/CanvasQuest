@@ -1,7 +1,10 @@
 main {
   background-color: var(--bs-body-bg);
-  justify-content: center;
-  margin: 0 auto;
+
+}
+main *{
+  max-width: 700px;
+  margin: auto;
 }
 .intro-section {
   display: flex;
@@ -9,13 +12,18 @@ main {
   align-items: center;
   text-align: center;
 }
+
+.intro-section * {
+  padding-top: 30px;
+}
 .intro-section h1 {
+  
 }
 .tagline {
 }
 
 .play-container {
-  padding: 20px;
+  padding-top: 30px;
 }
 .play-button {
   background-color: #3498db;
@@ -36,8 +44,10 @@ main {
   text-align: center;
 }
 .quiz-container {
-  width: 80vw;
-  margin: 0 auto;
+  max-width: 700px;
+  max-height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px
 }
 .quiz-container img {
   width: 100%;

@@ -2,6 +2,26 @@ footer {
   background-color: var(--bs-primary-color);
   color: white;
 }
+
+footer > div{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+}
+footer ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 30px;
+}
+
+footer ul li{
+  
+}
 .socials img {
-  width: 10vw;
+  max-width: 30px;
 }
