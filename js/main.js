@@ -1,9 +1,19 @@
 import { setupLoginModal } from './modal.js';
+import { getRandomArtwork } from './randomArtwork.js'; // Ensure the path is correct
+import { fetchArtworkData } from './artworkFetcher.js'; // Assuming this is correctly set up, but not used here
+import { generateQuizTemplate } from './quizTemplate.js'; // Assuming this is correctly set up, but not used here
 
 document.addEventListener('DOMContentLoaded', function () {
   setupLoginModal();
-  const menuButton = document.querySelector('.menu-btn');
-  const dropdown = document.querySelector('.dropdown-content');
+
+  // Ensure the play button is correctly defined
+  const playButton = document.querySelector('.play-button'); // Update this with your correct class or ID for the play button
+  const quizContainer = document.querySelector('.quiz-container'); // Ensure .quiz-container exists in HTML
+
+  if (!playButton || !quizContainer) {
+    console.error('Play button or quiz container not found!');
+    return;
+  }
 
   playButton.addEventListener('click', () => {
     fetch('artInfo.json')
@@ -14,37 +24,55 @@ document.addEventListener('DOMContentLoaded', function () {
       .then((data) => {
         console.log('Data received:', data); // Debugging step
 
-        // Check if data contains the 'artworks' key
-        if (
-          !data.artworks ||
-          !Array.isArray(data.artworks) ||
-          data.artworks.length === 0
-        ) {
+        // Check if data contains the correct structure
+        if (!data.data || !Array.isArray(data.data) || data.data.length === 0) {
           throw new Error('No artwork data found.');
         }
 
-        // Pick a random artwork
-        const randomIndex = Math.floor(Math.random() * data.artworks.length);
-        const artwork = data.artworks[randomIndex];
+        // Get random artwork
+        const randomArtwork = getRandomArtwork(data);
 
-        // Extract information
-        const title = artwork.title || 'Unknown Title';
-        const artist = artwork.artist_title || 'Unknown Artist';
-        const date = artwork.date_display || 'Unknown Date';
-        const imageUrl = artwork.image_id
-          ? `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
-          : 'images/img-placeholder.jpg';
-
-        // Populate the quiz-container div
-        quizContainer.innerHTML = `
-          <img src="${imageUrl}" alt="${title}" style="max-width:100%; height:auto;">
-          <h2>${title}</h2>
-          <p><strong>Artist:</strong> ${artist}</p>
-          <p><strong>Date:</strong> ${date}</p>
-        `;
+        // Display the artwork and quiz
+        if (randomArtwork) {
+          displayArtwork(randomArtwork);
+        } else {
+          console.error('Failed to get random artwork.');
+        }
       })
       .catch((error) => console.error('Error loading JSON:', error));
   });
-});
 
-setupLoginModal();
+  // Display the artwork and the quiz
+  function displayArtwork(artwork) {
+    if (!quizContainer) return;
+
+    quizContainer.innerHTML = `
+      <h2>Guess the ${artwork.questionType} of this artwork!</h2>
+      <img src="${artwork.imageUrl || 'placeholder.jpg'}" alt="${
+      artwork.title
+    }" class="artwork-image">
+      <p><strong>Title:</strong> ${artwork.title}</p>
+      <input type="text" id="answerInput" placeholder="Enter your answer...">
+      <button onclick="checkAnswer('${artwork.questionType}', '${
+      artwork[artwork.questionType]
+    }')">Submit</button>
+      <p id="feedback"></p>
+    `;
+  }
+
+  // Check the user's answer
+  window.checkAnswer = function (questionType, correctAnswer) {
+    const userAnswer = document
+      .getElementById('answerInput')
+      .value.trim()
+      .toLowerCase();
+    const feedback = document.getElementById('feedback');
+
+    feedback.textContent =
+      userAnswer === correctAnswer.toString().toLowerCase()
+        ? 'Correct!'
+        : `Incorrect. The correct answer was: ${correctAnswer}`;
+    feedback.style.color =
+      userAnswer === correctAnswer.toString().toLowerCase() ? 'green' : 'red';
+  };
+});

@@ -6,7 +6,7 @@
     <title>Canvas Quest</title>
     <link rel="stylesheet" href="css/styles.css" />
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js" defer></script>
   </head>
 
   <body>
@@ -29,7 +29,9 @@
           </div>
 
           <!-- LOGIN BUTTON -->
-          <button id="open-modal" class="login-btn" aria-haspopup="dialog">Login</button>
+          <button id="open-modal" class="login-btn" aria-haspopup="dialog">
+            Login
+          </button>
 
           <!-- MODAL LOGIN FORM -->
           <dialog id="login-modal" class="modal">
@@ -39,26 +41,41 @@
 
               <form id="login-form" autocomplete="off">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Enter your Username"
+                  required
+                />
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your Password" minlength="8" required>
-                <small>Password must be at least 8 characters long, including uppercase, lowercase, and a number.</small>
-                
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your Password"
+                  minlength="8"
+                  required
+                />
+                <small
+                  >Password must be at least 8 characters long, including
+                  uppercase, lowercase, and a number.</small
+                >
+
                 <div class="wrap">
                   <button class="submit-button" type="submit">Submit</button>
                 </div>
               </form>
 
-              <p>Not registered?
-                <a href="#" style="text-decoration: none;">Create an account</a>
+              <p>
+                Not registered?
+                <a href="#" style="text-decoration: none">Create an account</a>
               </p>
             </div>
           </dialog>
 
-
           <!--end of: LOGIN FORM-->
-
         </nav>
       </header>
 
@@ -67,8 +84,8 @@
           <h1>Welcome to Canvas Quest!</h1>
           <p>
             Here at the digital museum, you can find the works of many talented
-            artists. With this interactive game, test your knowledge on
-            the art pieces within our collection. Click below to start playing!
+            artists. With this interactive game, test your knowledge on the art
+            pieces within our collection. Click below to start playing!
           </p>
           <p class="tagline">Brought to you by Garrett-Savannah Inc.</p>
         </div>
@@ -86,7 +103,11 @@
         <div class="socials">
           <ul>
             <li>
-              <a href="https://facebook.com" rel="facebook" aria-label="Facebook">
+              <a
+                href="https://facebook.com"
+                rel="facebook"
+                aria-label="Facebook"
+              >
                 <img src="images/facebook_icon.png" alt="facebook" />
               </a>
             </li>
