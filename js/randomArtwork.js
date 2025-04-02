@@ -105,11 +105,15 @@ function displayArtwork(artwork) {
   }
 
   container.innerHTML = `
-            <h2>Guess the ${artwork.questionType} of this artwork!</h2>
+            <h2 class="artwork-question">Guess the ${
+              artwork.questionType
+            } of this artwork!</h2>
             <img src="${artwork.imageUrl || 'placeholder.jpg'}" alt="${
     artwork.title
   }" class="artwork-image">
-            <p><strong>Title:</strong> ${artwork.title}</p>
+            <p class="artwork-title"><strong>Title:</strong> ${
+              artwork.title
+            }</p>
             <input type="text" id="answerInput" placeholder="Enter your answer...">
             <button onclick="checkAnswer('${artwork.questionType}', '${
     artwork[artwork.questionType]
