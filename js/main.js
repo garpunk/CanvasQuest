@@ -2,6 +2,7 @@ import { setupLoginModal } from './modal.js';
 import { getRandomArtwork } from './randomArtwork.js'; // Ensure the path is correct
 import { fetchArtworkData } from './artworkFetcher.js'; // Assuming this is correctly set up, but not used here
 import { generateQuizTemplate } from './quizTemplate.js'; // Assuming this is correctly set up, but not used here
+import './slideshow.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   setupLoginModal();
