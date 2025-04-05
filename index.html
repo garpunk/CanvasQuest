@@ -75,7 +75,46 @@
             </div>
           </dialog>
 
-          <!--end of: LOGIN FORM-->
+          <!-- MODAL REGISTER FORM -->
+
+          <dialog id="register-modal" class="modal">
+            <div class="modal-content">
+              <span class="close-register">&times;</span>
+              <h3>Create Account</h3>
+          
+              <form id="register-form" autocomplete="off">
+                <!-- New Name field -->
+                <label for="new-name">Your Name:</label>
+                <input type="text" id="new-name" name="new-name" placeholder="Enter your full name" required />
+          
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" placeholder="Create a username" required />
+          
+                <label for="new-password">Password:</label>
+                <input
+                  type="password"
+                  id="new-password"
+                  name="new-password"
+                  minlength="8"
+                  required
+                  placeholder="Create a password"
+                />
+                <small>
+                  Password must be at least 8 characters long, including uppercase,
+                  lowercase, and a number.
+                </small>
+          
+                <div class="wrap">
+                  <button class="submit-button" type="submit">Register</button>
+                </div>
+              </form>
+            </div>
+          </dialog>
+          
+
+          <!-- END OF FORMS -->
+
+
         </nav>
       </header>
 
