@@ -14,12 +14,12 @@ main * {
 
 .intro-section * {
   padding-top: 30px;
+  color: #18354f;
 }
-<<<<<<< HEAD
-=======
 .sub-intro-section{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding-top: 30px;
+  color: var(--bs-primary-color);
 }
 .sub-intro-section > p:first-of-type{
   font-size: 20px;
@@ -33,24 +33,33 @@ main * {
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding-top: 45px;
 }
-.tagline {
+
+.tagline{
+  padding-top: 16px;
 }
->>>>>>> 5d8c81dc5a01919be6e7cbe1075564311a610d48
 
 .play-container {
   padding-top: 30px;
+  padding-bottom: 15px;
 }
 .play-button {
-  background-color: #3498db;
-  color: white;
-  padding: 10px;
+  background-color: #ec6a5e;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.play-button a{
+  text-decoration: none;
+  color: var(--bs-body-bg);
 }
 
 .play-button:hover {
-  background-color: #2980b9;
+  background-color: #e1665b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 .quiz-section {
   display: flex;
@@ -84,36 +93,56 @@ main * {
   overflow: hidden;
 }
 
+
 .slide {
   display: none;
   text-align: center;
   padding: 20px;
+  
 }
 
 .slide.active {
-  display: block;
   animation: fadeIn 1s ease-in-out;
+
 }
 
+
 .slide-image {
-  width: 100%;
-  height: auto;
+  max-height: 60vh;
+  max-width: 100%;
+  width: auto;
   border-radius: 10px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.slide-image-container{
+  position: relative;
 }
 
 .slide-info {
-  background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 15px;
   border-radius: 5px;
   margin-top: 10px;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
+  background-color: var(--bs-secondary-color);
+  color: var(--bs-primary-color);
+}
+
+.slide-info h2{
+  color: #1C3D5A;
+  font-size: 22px;
+}
+
+p > strong{
+  color: #1C3D5A;
 }
 
 .prev,
 .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;

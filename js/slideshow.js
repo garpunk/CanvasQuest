@@ -27,7 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <img src="https://www.artic.edu/iiif/2/${
                 art.image_id
               }/full/843,/0/default.jpg" 
-                   alt="${art.title}" class="slide-image">
+                  alt="${art.title}" class="slide-image">
+
+              <button id="prev" class="prev">&#10094;</button>
+              <button id="next" class="next">&#10095;</button>
               <div class="slide-info">
                 <h2>${art.title}</h2>
                 <p><strong>Date:</strong> ${art.date_display || 'Unknown'}</p>
