@@ -1,49 +1,44 @@
 main {
   background-color: var(--bs-body-bg);
-}
-main * {
-  max-width: 700px;
-  margin: auto;
-}
-.intro-section {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 
-.intro-section * {
-  padding-top: 30px;
+.intro-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 3rem 0 3rem;
+  width: 100%;
+  max-width: 1200px;
+  position: absolute;
+  top: 25%;
+
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
   color: #18354f;
-}
-.sub-intro-section{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding-top: 30px;
-  color: var(--bs-primary-color);
-}
-.sub-intro-section > p:first-of-type{
-  font-size: 20px;
-  line-height: 35px;
-  padding: 0;
-}
-.sub-intro-section > p:last-of-type{
-  font-size: 18px;
-}
-.intro-section h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding-top: 45px;
 }
 
-.tagline{
-  padding-top: 16px;
+.intro-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.play-container {
-  padding-top: 30px;
-  padding-bottom: 15px;
+.intro-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
-.play-button {
-  background-color: #ec6a5e;
+
+.gallery-button {
+  background-color: #ac8938;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -52,119 +47,40 @@ main * {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.play-button a{
+.gallery-button a {
   text-decoration: none;
   color: var(--bs-body-bg);
 }
 
-.play-button:hover {
-  background-color: #e1665b;
+.gallery-button:hover {
+  background-color: #a07c27;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-.quiz-section {
+
+.intro-images {
+  flex: 1;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
+  align-items: flex-start; /* lamp sticks to the top */
+  justify-content: center;
 }
-.quiz-container {
-  max-width: 90vw; /* Prevents it from going too wide */
-  max-height: 90vh; /* Prevents it from exceeding the viewport height */
-  overflow-y: auto; /* Allows scrolling if needed */
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  padding: 20px;
-  box-sizing: border-box;
-  position: relative;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-.quiz-container img {
+
+.lamp-img {
+  position: absolute;
+  top: 0;
   width: 100%;
+  max-width: 650px;
+  z-index: 1;
+  opacity: 1; /* Full opacity */
+  pointer-events: none; /* so it doesn't block clicks */
 }
 
-.slideshow-container {
+.home-img {
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-  overflow: hidden;
-}
-
-
-.slide {
-  display: none;
-  text-align: center;
-  padding: 20px;
-  
-}
-
-.slide.active {
-  animation: fadeIn 1s ease-in-out;
-
-}
-
-
-.slide-image {
-  max-height: 60vh;
-  max-width: 100%;
-  width: auto;
+  margin-top: 90px; /* push it down slightly to sit under lamp */
+  width: 90%;
+  max-width: 320px;
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  object-fit: contain;
-  margin-bottom: 5px;
-}
-
-.slide-image-container{
-  position: relative;
-}
-
-.slide-info {
-  color: white;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 10px;
-  text-align: left;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 17px;
-  background-color: var(--bs-secondary-color);
-  color: var(--bs-primary-color);
-}
-
-.slide-info h2{
-  color: #1C3D5A;
-  font-size: 22px;
-}
-
-p > strong{
-  color: #1C3D5A;
-}
-
-.prev,
-.next {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  z-index: 100;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }

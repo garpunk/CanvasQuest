@@ -21,12 +21,12 @@
             /></a>
           </div>
 
-          <div class="menu-dropdown">
-            <button class="menu-btn">Menu</button>
-            <ul class="dropdown-content">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Stats</a></li>
-            </ul>
+          <div class="theme-dropdown">
+            <label for="theme-select">Theme</label>
+            <select id="theme-select">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>            
           </div>
 
           <!-- LOGIN BUTTON -->
@@ -120,34 +120,29 @@
       </header>
 
       <main>
-        <div class="intro-section">
-          <h1>Welcome to Canvas Quest!</h1>
-          <div class="sub-intro-section">
-          <p>
-            Here at the digital museum, you can find the works of many talented
-            artists. With this interactive game, test your knowledge on the art
-            pieces within our collection. <br>Click below to start playing!
-          </p>
-          <p class="tagline">Brought to you by Garrett-Savannah Inc.</p>
-          </div>
-        </div>
-
-        <div class="quiz-section">
-          <div class="play-container">
-            <button title="PLAY NOW" class="play-button">
-              <a href="quiz.html">PLAY NOW</a>
+        <div class="intro-wrapper">
+          
+          <!-- Left side: text -->
+          <div class="intro-text">
+            <h1>Welcome to Canvas Quest!</h1>
+            <p>
+              Discover incredible art and see what speaks to you. <br>
+              Click Gallery to begin exploring.
+            </p>
+            <button title="gallery" class="gallery-button">
+              <a href="quiz.html">Gallery</a>
             </button>
           </div>
-          <div class="slideshow-container">
-            
-            <div id="art-slideshow">
-
-              <!-- Slides will be dynamically inserted here -->
-            </div>
-
+      
+          <!-- Right side: images -->
+          <div class="intro-images">
+            <img class="lamp-img" src="images/lamp -01.svg" alt="Lamp">
+            <img class="home-img" src="images/img-placeholder.jpg" alt="Art Preview">
           </div>
+      
         </div>
       </main>
+      
     </div>
     <footer>
       <div>
