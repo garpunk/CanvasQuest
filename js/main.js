@@ -81,10 +81,10 @@ const themes = {
     '--bs-form-color': '#FEF7F2',
     '--bs-form-font-color': '#555',
     '--bs-form-border-color': '#ddd',
-    '--bs-form-button-hover-color': '#68a8ae',
-    
+    '--bs-form-button-hover-color': '#68a8ae',    
     '--bs-form-account-color': '#847d73',
     '--bs-form-account-color-hover': '#4c4841',
+    '--bs-form-account-color-hover': 'rgba(106, 97, 85, 0.9)', 
     '--lamp-src': 'images/lamp-light.svg'
 
   },
@@ -103,6 +103,7 @@ const themes = {
     '--bs-form-button-hover-color': '#a07c27', 
     '--bs-form-account-color': '#b19a64', 
     '--bs-form-account-color-hover': '#cab073', 
+    '--bs-form-account-color-hover': 'rgba(20, 26, 15, 0.9)',    
     '--lamp-src': 'images/lamp-dark.svg'
   }
 };

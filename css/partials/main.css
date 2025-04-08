@@ -61,7 +61,7 @@ main {
   flex: 1;
   position: relative;
   display: flex;
-  align-items: flex-start; /* lamp sticks to the top */
+  align-items: flex-start; 
   justify-content: center;
 }
 
@@ -71,16 +71,15 @@ main {
   width: 100%;
   max-width: 650px;
   z-index: 1;
-  opacity: 1; /* Full opacity */
-  pointer-events: none; /* so it doesn't block clicks */
+  opacity: 1; 
 }
 
 .home-img {
   position: relative;
-  margin-top: 90px; /* push it down slightly to sit under lamp */
+  margin-top: 90px;  
   width: 90%;
   max-width: 320px;
   z-index: 2;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  box-shadow: 0 30px 30px var(--bs-form-account-color-hover);
+  
 }

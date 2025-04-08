@@ -46,6 +46,7 @@ nav {
 .logo-container img {
   width: 100%;
   margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -62,7 +63,7 @@ nav {
   cursor: pointer;
   height: fit-content;
   margin: 15px;
-
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .login-btn:hover {
@@ -76,6 +77,9 @@ nav {
   align-items: center;
   gap: 6px;
   margin: 15px;
+  padding: 0px 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .theme-dropdown label {
