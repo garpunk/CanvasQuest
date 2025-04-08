@@ -17,5 +17,5 @@
 .reveal-p-tag {
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
-  animation-delay: 1s; /* Optional: add delay for staggered effect */
+  animation-delay: 1s; 
 }

@@ -1,17 +1,15 @@
-/* styles.css */
 
-/* Style for the row of artworks */
 .artwork-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px; /* Adjust space between artwork items */
+  gap: 20px; 
   padding: 20px;
 }
 
-/* Style for each artwork item */
+
 .artwork-item {
-  width: 200px; /* Adjust the size of each artwork */
+  width: 200px; 
   text-align: center;
   border: 1px solid #ccc;
   padding: 10px;
