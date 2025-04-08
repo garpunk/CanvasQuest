@@ -21,3 +21,7 @@ footer ul{
 .socials img {
   max-width: 30px;
 }
+
+.copyright{
+  color: var(--bs-body-font-color);
+}
