@@ -12,7 +12,8 @@
 }
 
 .modal-content {
-  background-color: white;
+  background-color: var(--bs-form-color);
+  color: var(--bs-form-font-color);
   padding: 20px;
   border-radius: 10px;
   width: 300px;
@@ -34,7 +35,7 @@ label {
   margin-top: 10px;
   margin-bottom: 5px;
   text-align: left;
-  color: #555;
+  color: var(--bs-form-font-color);
   font-weight: bold;
 }
 
@@ -44,8 +45,13 @@ input {
   margin-bottom: 15px;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #ddd;
+  border: 1px solid var(--bs-form-border-color);
+  background-color: var(--bs-form-color);
   border-radius: 5px;
+}
+
+input::placeholder{
+  color: var(--bs-form-account-color);
 }
 
 .submit-button {
@@ -62,7 +68,14 @@ input {
 }
 
 .submit-button:hover {
-  background-color: #2980b9;
+  background-color: var(--bs-form-button-hover-color);
+}
+
+.create-account-btn{
+  color: var(--bs-form-account-color);
+}
+.create-account-btn:hover{
+  color: var(--bs-form-account-color-hover);
 }
 
 .wrap {

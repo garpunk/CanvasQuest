@@ -48,7 +48,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
-  background-color: var(--bs-secondary-color);
+  background-color: var(--bs-body-bg);
   color: var(--bs-primary-color);
   font-size: 16px;
   border: none;
@@ -56,8 +56,9 @@ nav {
   cursor: pointer;
   height: fit-content;
   margin: 15px;
+
 }
 
 .login-btn:hover {
-  background-color: #2980b9;
+  background-color: var(--bs-body-bg-hover);
 }
