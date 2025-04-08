@@ -43,7 +43,7 @@ function displayArtworks(artworks) {
   const modal = document.getElementById('artwork-modal');
   const modalImg = document.getElementById('modal-image');
   const captionText = document.getElementById('caption');
-  const closeBtn = document.querySelector('.modal .close');
+  const closeBtn = document.querySelector('.modal-gallery .close');
 
   artworks.forEach((artwork) => {
     const artworkElement = document.createElement('div');
