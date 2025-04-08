@@ -7,10 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const playButton = document.querySelector('.play-button'); // Update this with your correct class or ID for the play button
   const quizContainer = document.querySelector('.quiz-container'); // Ensure .quiz-container exists in HTML
 
-  if (!playButton || !quizContainer) {
-    console.error('Play button or quiz container not found!');
-    return;
-  }
 });
 
 // theme changer
