@@ -1,5 +1,5 @@
 /* Modal container (hidden by default) */
-.modal {
+.modal-gallery {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.modal-content {
+.modal-content-gallery {
   display: block;
   margin: auto;
   max-width: 90vw; /* up to 90% of viewport width */
