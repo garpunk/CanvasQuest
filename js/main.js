@@ -4,8 +4,8 @@ import './randomArtwork.js';
 document.addEventListener('DOMContentLoaded', function () {
   setupLoginModal();
 
-  const playButton = document.querySelector('.play-button'); // Update this with your correct class or ID for the play button
-  const quizContainer = document.querySelector('.quiz-container'); // Ensure .quiz-container exists in HTML
+  const playButton = document.querySelector('.play-button'); 
+  const quizContainer = document.querySelector('.quiz-container'); 
 
 });
 
