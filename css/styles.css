@@ -5,16 +5,16 @@
 @import 'partials/form.css';
 @import 'partials/artwork.css';
 @import 'partials/animation.css';
-@import 'partials/quiz.css';
+@import 'partials/galleryModal.css';
 
 html,
 body {
-  height: 100%; 
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
 
 .content {
-  flex: 1; 
+  flex: 1;
 }

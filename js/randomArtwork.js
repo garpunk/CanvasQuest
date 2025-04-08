@@ -62,4 +62,32 @@ function displayArtworks(artworks) {
     // Append the artwork element to the container
     container.appendChild(artworkElement);
   });
+
+  const modal = document.getElementById('artwork-modal');
+  const modalImg = document.getElementById('modal-image');
+  const captionText = document.getElementById('caption');
+  const closeBtn = document.querySelector('.modal .close');
+
+  container.querySelectorAll('.artwork-image').forEach((img, index) => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+      const artwork = artworks[index];
+      captionText.innerHTML = `<strong>${artwork.title}</strong> by ${
+        artwork.artist_title || 'Unknown'
+      }, ${artwork.date_start || 'N/A'}`;
+    });
+  });
+
+  // Close when clicking the X
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close when clicking outside the modal-body (but not the image or caption)
+  modal.addEventListener('click', (e) => {
+    if (!e.target.closest('.modal-body')) {
+      modal.style.display = 'none';
+    }
+  });
 }
