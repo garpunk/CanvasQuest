@@ -38,20 +38,27 @@ function displayArtworks(artworks) {
     return;
   }
 
-  // Clear the container first to avoid duplicates
   container.innerHTML = '';
+
+  const modal = document.getElementById('artwork-modal');
+  const modalImg = document.getElementById('modal-image');
+  const captionText = document.getElementById('caption');
+  const closeBtn = document.querySelector('.modal .close');
 
   artworks.forEach((artwork) => {
     const artworkElement = document.createElement('div');
     artworkElement.classList.add('artwork-item');
 
-    // Create the HTML for each artwork
+    const imageUrl = artwork.image_id
+      ? `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
+      : 'placeholder.jpg';
+
     artworkElement.innerHTML = `
-      <img src="${
-        artwork.image_id
-          ? `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
-          : 'placeholder.jpg'
-      }" alt="${artwork.title}" class="artwork-image">
+      <img 
+        src="${imageUrl}" 
+        alt="${artwork.title}" 
+        class="artwork-image" 
+        data-id="${artwork.id}">
       <p class="artwork-title"><strong>Title:</strong> ${artwork.title}</p>
       <p class="artwork-artist"><strong>Artist:</strong> ${
         artwork.artist_title || artwork.artist_display
@@ -59,35 +66,59 @@ function displayArtworks(artworks) {
       <p class="artwork-year"><strong>Year:</strong> ${artwork.date_start}</p>
     `;
 
-    // Append the artwork element to the container
     container.appendChild(artworkElement);
   });
 
-  const modal = document.getElementById('artwork-modal');
-  const modalImg = document.getElementById('modal-image');
-  const captionText = document.getElementById('caption');
-  const closeBtn = document.querySelector('.modal .close');
+  // Modal open function
+  function openModalWithArtwork(artwork) {
+    modal.style.display = 'block';
+    modalImg.src = `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`;
+    captionText.innerHTML = `<strong>${artwork.title}</strong> by ${
+      artwork.artist_title || 'Unknown'
+    }, ${artwork.date_start || 'N/A'}`;
 
-  container.querySelectorAll('.artwork-image').forEach((img, index) => {
+    // Push to URL
+    const newUrl = `${window.location.pathname}?image=${artwork.id}`;
+    history.pushState({}, '', newUrl);
+  }
+
+  // Modal close function
+  function closeModal() {
+    modal.style.display = 'none';
+    modalImg.src = '';
+    captionText.innerHTML = '';
+
+    // Remove query parameter
+    const baseUrl = window.location.pathname;
+    history.pushState({}, '', baseUrl);
+  }
+
+  // Image click listener
+  container.querySelectorAll('.artwork-image').forEach((img) => {
     img.addEventListener('click', () => {
-      modal.style.display = 'block';
-      modalImg.src = img.src;
-      const artwork = artworks[index];
-      captionText.innerHTML = `<strong>${artwork.title}</strong> by ${
-        artwork.artist_title || 'Unknown'
-      }, ${artwork.date_start || 'N/A'}`;
+      const id = parseInt(img.dataset.id);
+      const artwork = artworks.find((a) => a.id === id);
+      if (artwork) openModalWithArtwork(artwork);
     });
   });
 
   // Close when clicking the X
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+  closeBtn.addEventListener('click', closeModal);
 
-  // Close when clicking outside the modal-body (but not the image or caption)
+  // Close when clicking outside modal body
   modal.addEventListener('click', (e) => {
     if (!e.target.closest('.modal-body')) {
-      modal.style.display = 'none';
+      closeModal();
     }
   });
+
+  // If URL contains ?image=ID, open that artwork in modal
+  const params = new URLSearchParams(window.location.search);
+  const imageIdFromUrl = parseInt(params.get('image'));
+  if (imageIdFromUrl) {
+    const matchingArtwork = artworks.find((a) => a.id === imageIdFromUrl);
+    if (matchingArtwork) {
+      openModalWithArtwork(matchingArtwork);
+    }
+  }
 }
