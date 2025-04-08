@@ -1,13 +1,12 @@
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
-
 
 main {
   background-color: var(--bs-body-bg);
   min-height: 100vh;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   overflow: auto;
@@ -22,7 +21,6 @@ main {
   width: 100%;
   position: absolute;
   top: 25%;
-
 }
 
 .intro-text {
@@ -51,9 +49,6 @@ main {
   padding: 12px 45px;
   font-size: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-button a {
   text-decoration: none;
   color: var(--bs-body-bg);
 }
@@ -67,7 +62,7 @@ main {
   flex: 1;
   position: relative;
   display: flex;
-  align-items: flex-start; 
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -78,91 +73,87 @@ main {
   min-width: 350px;
   max-width: 650px;
   z-index: 1;
-  opacity: 1; 
+  opacity: 1;
 }
 
 .home-img {
   position: relative;
-  margin-top: 90px;  
+  margin-top: 90px;
   width: 90%;
   min-width: 250px;
   max-width: 320px;
   z-index: 2;
   box-shadow: 0 30px 30px var(--bs-form-account-color-hover);
-  
 }
-
 
 @media (max-width: 600px) {
   .intro-wrapper {
     flex-direction: column;
-    align-items: center;  
-    text-align: center;  
+    align-items: center;
+    text-align: center;
     justify-content: center;
   }
 
   .intro-images {
-    margin-top: 20px; 
+    margin-top: 20px;
   }
 
-  .intro-text h1{
-    font-size: 25px;    
+  .intro-text h1 {
+    font-size: 25px;
   }
 
-  .intro-text p{
-    font-size: 16px;    
+  .intro-text p {
+    font-size: 16px;
   }
 
-  .intro-text{
+  .intro-text {
     text-align: center;
   }
-  .gallery-button{
-    font-size: 18px;    
+  .gallery-button {
+    font-size: 18px;
   }
 
-  .lamp-img, .home-img {
-    max-width: 90%; 
+  .lamp-img,
+  .home-img {
+    max-width: 90%;
     height: auto;
   }
 
   body {
     font-size: 14px;
-    background-color: #ffffff; 
-    
+    background-color: #ffffff;
   }
 
   nav {
-    flex-direction: column; 
-    align-items: center; 
-    padding: 1rem; 
-    
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
   }
 
   .nav-right {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 10px; 
-    
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  .theme-dropdown, .login-btn {
-    margin: 0; 
+  .theme-dropdown,
+  .login-btn {
+    margin: 0;
     font-size: 18px;
   }
 
-  .theme-dropdown label{
+  .theme-dropdown label {
     font-size: 18px;
   }
 
-  #theme-select{
+  #theme-select {
     font-size: 18px;
   }
 
-  .intro-wrapper{
+  .intro-wrapper {
     max-width: 1200px;
     flex-grow: 1;
     position: static;
   }
-
 }
