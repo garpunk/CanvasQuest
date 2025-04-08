@@ -1,3 +1,8 @@
 main {
     background-color: var(--bs-body-bg);
   }
+
+  .artwork-item{
+    color: var(--bs-body-font-color);
+    border: 1px solid var(--bs-body-font-color);
+  }
