@@ -1,8 +1,5 @@
 import { setupLoginModal } from './modal.js';
-import { getRandomArtwork } from './randomArtwork.js'; // Ensure the path is correct
-import { fetchArtworkData } from './artworkFetcher.js'; // Assuming this is correctly set up, but not used here
-import { generateQuizTemplate } from './quizTemplate.js'; // Assuming this is correctly set up, but not used here
-import './slideshow.js';
+import './randomArtwork.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   setupLoginModal();
@@ -42,24 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .catch((error) => console.error('Error loading JSON:', error));
   });
-
-  // Display the artwork and the quiz
-  function displayArtwork(artwork) {
-    if (!quizContainer) return;
-
-    quizContainer.innerHTML = `
-      <h2>Guess the ${artwork.questionType} of this artwork!</h2>
-      <img src="${artwork.imageUrl || 'placeholder.jpg'}" alt="${
-      artwork.title
-    }" class="artwork-image">
-      <p><strong>Title:</strong> ${artwork.title}</p>
-      <input type="text" id="answerInput" placeholder="Enter your answer...">
-      <button onclick="checkAnswer('${artwork.questionType}', '${
-      artwork[artwork.questionType]
-    }')">Submit</button>
-      <p id="feedback"></p>
-    `;
-  }
 
   // Check the user's answer
   window.checkAnswer = function (questionType, correctAnswer) {

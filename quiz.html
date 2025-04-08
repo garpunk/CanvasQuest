@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Canvas Quest</title>
     <link rel="stylesheet" href="css/styles.css" />
-
-    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/randomArtwork.js" defer></script>
   </head>
-
   <body>
     <div class="content">
       <header>
         <nav>
           <div class="logo-container">
-            <a href="index.html"
-              ><img
+            <a href="index.html">
+              <img
                 src="images/logo.png"
                 alt="logo reads canvas quest with border around words"
-            /></a>
+              />
+            </a>
           </div>
-
           <div class="menu-dropdown">
             <button class="menu-btn">Menu</button>
             <ul class="dropdown-content">
@@ -28,62 +26,17 @@
               <li><a href="#">Stats</a></li>
             </ul>
           </div>
-
           <!-- LOGIN BUTTON -->
           <button id="open-modal" class="login-btn" aria-haspopup="dialog">
             Login
           </button>
-
-          <!-- MODAL LOGIN FORM -->
-          <dialog id="login-modal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <h3>Login</h3>
-
-              <form id="login-form" autocomplete="off">
-                <label for="username">Username:</label>
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  placeholder="Enter your Username"
-                  required
-                />
-
-                <label for="password">Password:</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Enter your Password"
-                  minlength="8"
-                  required
-                />
-                <small
-                  >Password must be at least 8 characters long, including
-                  uppercase, lowercase, and a number.</small
-                >
-
-                <div class="wrap">
-                  <button class="submit-button" type="submit">Submit</button>
-                </div>
-              </form>
-
-              <p>
-                Not registered?
-                <a href="#" style="text-decoration: none">Create an account</a>
-              </p>
-            </div>
-          </dialog>
-
-          <!--end of: LOGIN FORM-->
         </nav>
       </header>
 
       <main>
-        <div class="quiz-section">
-          <div class="play-container"></div>
-          <div class="quiz-container"></div>
+        <div class="artwork-section">
+          <!-- Container for artwork row -->
+          <div class="artwork-row"></div>
         </div>
       </main>
     </div>
@@ -104,7 +57,7 @@
               <a
                 href="https://instagram.com"
                 rel="instagram"
-                aria-label="Twitter"
+                aria-label="Instagram"
               >
                 <img src="images/instagram_icon.png" alt="instagram" />
               </a>
@@ -114,11 +67,5 @@
         &copy; 2025 all rights reserved
       </div>
     </footer>
-
-    <!-- <img
-      src="data:image\/gif;base64,R0lGODlhBAAFAPQAABsaIB8eIx8eJiMhJS0rKy4rKy8tLTEuLzgpKjg1NDAyOkEsJ0QzLkM0LkM3MUo5MEtBOU5DOVJGPUpAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAEAAUAAAUR4CMlxQIRgMMYQ4MIQTQpRwgAOw=="
-      alt=""
-      width="400px"
-    />-->
   </body>
 </html>
