@@ -1,0 +1,21 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-text {
+  opacity: 0.2;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.reveal-p-tag {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+  animation-delay: 1s; /* Optional: add delay for staggered effect */
+}
