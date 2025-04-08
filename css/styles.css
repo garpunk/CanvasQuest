@@ -4,6 +4,7 @@
 @import 'partials/variables.css';
 @import 'partials/form.css';
 @import 'partials/artwork.css';
+@import 'partials/animation.css';
 
 html,
 body {
