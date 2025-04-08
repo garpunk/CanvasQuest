@@ -4,7 +4,6 @@ import './randomArtwork.js';
 document.addEventListener('DOMContentLoaded', function () {
   setupLoginModal();
 
-  
   const playButton = document.querySelector('.play-button'); // Update this with your correct class or ID for the play button
   const quizContainer = document.querySelector('.quiz-container'); // Ensure .quiz-container exists in HTML
 
@@ -12,57 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Play button or quiz container not found!');
     return;
   }
-
-  playButton.addEventListener('click', () => {
-    fetch('artInfo.json')
-      .then((response) => {
-        if (!response.ok) throw new Error('Failed to load art data.');
-        return response.json();
-      })
-      .then((data) => {
-        console.log('Data received:', data); // Debugging step
-
-        // Check if data contains the correct structure
-        if (!data.data || !Array.isArray(data.data) || data.data.length === 0) {
-          throw new Error('No artwork data found.');
-        }
-
-        // Get random artwork
-        const randomArtwork = getRandomArtwork(data);
-
-        // Display the artwork and quiz
-        if (randomArtwork) {
-          displayArtwork(randomArtwork);
-        } else {
-          console.error('Failed to get random artwork.');
-        }
-      })
-      .catch((error) => console.error('Error loading JSON:', error));
-  });
-
-  // Check the user's answer
-  window.checkAnswer = function (questionType, correctAnswer) {
-    const userAnswer = document
-      .getElementById('answerInput')
-      .value.trim()
-      .toLowerCase();
-    const feedback = document.getElementById('feedback');
-
-    feedback.textContent =
-      userAnswer === correctAnswer.toString().toLowerCase()
-        ? 'Correct!'
-        : `Incorrect. The correct answer was: ${correctAnswer}`;
-    feedback.style.color =
-      userAnswer === correctAnswer.toString().toLowerCase() ? 'green' : 'red';
-  };
 });
-
-
 
 // theme changer
 
 const themeSelect = document.getElementById('theme-select');
-
 
 const root = document.documentElement;
 const lampImg = document.querySelector('.lamp-img');
@@ -77,35 +30,33 @@ const themes = {
     '--bs-button-color': '#ac8938',
     '--bs-button-hover-color': '#a07c27',
 
-
     '--bs-form-color': '#FEF7F2',
     '--bs-form-font-color': '#555',
     '--bs-form-border-color': '#ddd',
-    '--bs-form-button-hover-color': '#68a8ae',    
+    '--bs-form-button-hover-color': '#68a8ae',
     '--bs-form-account-color': '#847d73',
     '--bs-form-account-color-hover': '#4c4841',
-    '--bs-form-account-color-hover': 'rgba(106, 97, 85, 0.9)', 
-    '--lamp-src': 'images/lamp-light.svg'
-
+    '--bs-form-account-color-hover': 'rgba(106, 97, 85, 0.9)',
+    '--lamp-src': 'images/lamp-light.svg',
   },
   dark: {
     '--bs-primary-color': '#EBE1DB',
-    '--bs-secondary-color': '#ac8938', 
+    '--bs-secondary-color': '#ac8938',
     '--bs-body-font-color': '#EBE1DB',
-    '--bs-body-bg': '#2a361f', 
+    '--bs-body-bg': '#2a361f',
     '--bs-body-bg-hover': '#38442d',
     '--bs-button-color': '#ac8938',
     '--bs-button-hover-color': '#a07c27',
 
     '--bs-form-color': '#46533a',
-    '--bs-form-font-color': '#EBE1DB', 
+    '--bs-form-font-color': '#EBE1DB',
     '--bs-form-border-color': '#2a361f',
-    '--bs-form-button-hover-color': '#a07c27', 
-    '--bs-form-account-color': '#b19a64', 
-    '--bs-form-account-color-hover': '#cab073', 
-    '--bs-form-account-color-hover': 'rgba(20, 26, 15, 0.9)',    
-    '--lamp-src': 'images/lamp-dark.svg'
-  }
+    '--bs-form-button-hover-color': '#a07c27',
+    '--bs-form-account-color': '#b19a64',
+    '--bs-form-account-color-hover': '#cab073',
+    '--bs-form-account-color-hover': 'rgba(20, 26, 15, 0.9)',
+    '--lamp-src': 'images/lamp-dark.svg',
+  },
 };
 
 function applyTheme(theme) {
@@ -124,13 +75,10 @@ function applyTheme(theme) {
   localStorage.setItem('theme', theme);
 }
 
-
 const savedTheme = localStorage.getItem('theme') || 'light';
 applyTheme(savedTheme);
 themeSelect.value = savedTheme;
 
-
 themeSelect.addEventListener('change', (e) => {
   applyTheme(e.target.value);
 });
-
