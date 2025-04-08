@@ -1,6 +1,6 @@
 header {
   background-color: var(--bs-body-bg);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--bs-body-font-family);
 }
 nav {
   display: flex;
@@ -8,6 +8,12 @@ nav {
   align-items: center;
   margin: 0 auto;
   padding: 2rem 2rem 0 2rem;
+  justify-content: space-between;
+}
+
+.nav-right{
+  display: flex;
+  align-items: center;
 }
 .theme-dropdown {
   position: relative;
@@ -50,7 +56,7 @@ nav {
   padding: 12px 24px;
   background-color: var(--bs-body-bg);
   color: var(--bs-primary-color);
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -60,5 +66,35 @@ nav {
 }
 
 .login-btn:hover {
+  background-color: var(--bs-body-bg-hover);
+}
+
+
+
+.theme-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 15px;
+}
+
+.theme-dropdown label {
+  font-size: 20px;
+  color: var(--bs-primary-color);
+  text-align: center;
+  margin: 0;
+}
+
+#theme-select {
+  padding: 12px 24px 12px 6px;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-primary-color);
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#theme-select:hover {
   background-color: var(--bs-body-bg-hover);
 }

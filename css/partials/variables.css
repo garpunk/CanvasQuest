@@ -12,11 +12,5 @@
     --bs-form-border-color: #ddd;
     --bs-form-button-hover-color: #68a8ae;
 
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-      "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-serif: "Times New Roman", Times, serif;
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    --bs-body-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    --bs-body-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
